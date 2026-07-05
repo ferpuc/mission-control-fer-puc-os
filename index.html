@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mission Control - Fer Puc OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260704-schedule-2" />
+</head>
+<body>
+  <div class="ambient"></div>
+  <main class="shell">
+    <header class="topbar">
+      <section class="brand-zone">
+        <div class="sigil">FP</div>
+        <div>
+          <p class="eyebrow">Mission Control</p>
+          <h1>Fer Puc OS</h1>
+        </div>
+      </section>
+
+      <section class="objective-panel">
+        <div class="objective-copy">
+          <span>Objetivo principal</span>
+          <strong>Fer Puc facturando fuerte - Junio 2027</strong>
+        </div>
+        <div class="progress annual">
+          <span style="width: 43%"></span>
+        </div>
+      </section>
+
+      <section class="command-stats">
+        <div>
+          <span>Nivel</span>
+          <strong id="levelValue">12</strong>
+        </div>
+        <div>
+          <span>Energía</span>
+          <strong id="energyValue">86%</strong>
+        </div>
+        <div>
+          <span>Racha</span>
+          <strong id="streakValue">18 días</strong>
+        </div>
+      </section>
+    </header>
+
+    <section class="mission-banner">
+      <button class="icon-button" id="focusToggle" title="Modo enfoque" aria-label="Activar modo enfoque">
+        <span></span>
+      </button>
+      <p id="quoteText">La claridad es una ventaja competitiva.</p>
+      <div class="week-score">
+        <span>Progreso semanal</span>
+        <strong id="weeklyProgress">0%</strong>
+      </div>
+    </section>
+
+    <div class="dashboard-grid">
+      <aside class="panel projects-panel">
+        <div class="section-heading">
+          <p>Facciones</p>
+          <h2>Líneas estratégicas</h2>
+        </div>
+        <div id="projectsList" class="project-list"></div>
+        <div class="legacy-card">
+          <p>Evolución del legado</p>
+          <strong id="legacyScore">Salud 24% · Riqueza 31% · Reputación 28%</strong>
+          <div class="legacy-bars">
+            <span style="height: 42%"></span>
+            <span style="height: 62%"></span>
+            <span style="height: 54%"></span>
+            <span style="height: 38%"></span>
+            <span style="height: 70%"></span>
+          </div>
+        </div>
+      </aside>
+
+      <section class="calendar-panel">
+        <div class="calendar-head">
+          <div>
+            <p class="eyebrow">Campaña semanal</p>
+            <h2>Operaciones de alto impacto</h2>
+          </div>
+          <div class="calendar-tools">
+            <button class="tool-btn active" data-view="week">Semana</button>
+            <button class="tool-btn" data-view="compact">Compacto</button>
+          </div>
+        </div>
+        <div class="calendar-wrap">
+          <div class="time-axis" id="timeAxis"></div>
+          <div class="calendar" id="calendar"></div>
+        </div>
+      </section>
+
+      <aside class="panel missions-panel">
+        <div class="section-heading">
+          <p>Hoy</p>
+          <h2>Misiones del día</h2>
+        </div>
+        <div class="xp-card">
+          <div class="xp-top">
+            <span>XP actual</span>
+            <strong><span id="xpValue">0</span> XP</strong>
+          </div>
+          <div class="progress xp">
+            <span id="xpBar" style="width: 0%"></span>
+          </div>
+          <p id="xpMissing">Faltan 0 XP para el siguiente nivel</p>
+        </div>
+        <div id="dailyMissions" class="daily-list"></div>
+        <div class="completion-reward" id="completionReward">
+          <span>Campaña diaria completa</span>
+          <strong>+150 XP · Claridad desbloqueada</strong>
+        </div>
+      </aside>
+    </div>
+
+    <section class="bottom-grid">
+      <div class="panel achievement-panel">
+        <div class="section-heading">
+          <p>Logros</p>
+          <h2>Achievements activos</h2>
+        </div>
+        <div id="achievements" class="achievement-grid"></div>
+      </div>
+      <div class="panel stats-panel">
+        <div class="section-heading">
+          <p>Inteligencia ejecutiva</p>
+          <h2>Estadísticas mensuales y anuales</h2>
+        </div>
+        <div class="stat-matrix">
+          <div><span>Bloques completados</span><strong id="blocksDone">0</strong></div>
+          <div><span>Misiones semanales</span><strong id="weeklyMissions">0</strong></div>
+          <div><span>Bloques cliente</span><strong id="clientBlocks">0</strong></div>
+          <div><span>Avance anual</span><strong id="annualAdvance">43%</strong></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast">Misión completada</div>
+  <script src="app.js?v=20260704-schedule-2"></script>
+</body>
+</html>
